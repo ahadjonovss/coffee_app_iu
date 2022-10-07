@@ -1,3 +1,4 @@
+import 'package:coffee/pages/sign_in.dart';
 import 'package:coffee/utils/colors.dart';
 import 'package:coffee/utils/fonts.dart';
 import 'package:coffee/utils/project_images.dart';
@@ -31,16 +32,16 @@ class FirstPage extends StatelessWidget {
                           fit: BoxFit.cover))),
             ),
             Positioned(
-                child: Container(
-              height: 290,
-              width: 240,
-              child: Text(
-                "Coffee\nMade\nEasy",
-                style: ProjectFonts.Poppins_Bold.copyWith(
-                  color: Colors.white,
-                  fontSize: 66,
-                  decorationStyle: 
-                  ]
+              left: 37,
+              bottom: 300,
+              child: Container(
+                height: 290,
+                width: 240,
+                child: Text(
+                  "Coffee\nMade\nEasy",
+                  style: ProjectFonts.Poppins_Bold.copyWith(
+                    color: Colors.white,
+                    fontSize: 66,
                   ),
                 ),
               ),
@@ -50,7 +51,9 @@ class FirstPage extends StatelessWidget {
                 left: 34,
                 child: InkWell(
                   splashColor: Colors.grey,
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>SignIn()));
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(22),
@@ -66,7 +69,7 @@ class FirstPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                ))
+                )),
           ],
         ),
       ),
