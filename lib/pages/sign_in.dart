@@ -6,6 +6,7 @@ import 'package:coffee/utils/icons.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/project_images.dart';
+import 'home_page.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -112,7 +113,7 @@ class _SignInState extends State<SignIn> {
                           ), //divider
                           InkWell(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>FirstPage()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                             },
                             child: Center(
                               child: Container(
